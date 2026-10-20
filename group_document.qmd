@@ -7,6 +7,12 @@ format: html
 
 ## Alberto
 
+some text pullié
+
+```{r}
+a = 8 + 7
+```
+
 ## Lisa
 
 ## Jesús
