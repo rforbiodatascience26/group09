@@ -32,4 +32,14 @@ schoeppelimunggi <- "houldelerbeseler"
 
 ```
 
+### New Analysis
+
+They're taking the hobbits to Isengard
+
+```{r}
+#| label: temp2
+
+you <- "shall pass"
+```
+
 ## Jesús
