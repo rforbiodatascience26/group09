@@ -10,3 +10,16 @@ format: html
 ## Lisa
 
 ## Jesús
+
+```{r}
+#| label: test
+
+paste("Hola me dicen chuy")
+
+x = log2(2)
+if (1 == x){
+  print("las mates si sirven")
+}
+
+
+```
