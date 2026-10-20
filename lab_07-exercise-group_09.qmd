@@ -34,6 +34,36 @@ library("cowplot")
 
 ```{r}
 #| label: data
+#| message: false
 
 biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
+```
+
+## Look at the data in PC coordinates
+
+```{r}
+#| label: look at data
+
+#add PCA with prcomp() 
+pca_fit <- biopsy |> 
+  select(where(is.numeric)) |> #select numeric variables for PCA
+  scale() |> 
+  prcomp() #do PCA
+
+#The first principal component (PC1) captures the greatest possible variation in the data. The second (PC2) captures the greatest remaining variation, subject to being uncorrelated with PC1.
+
+
+#make ggplot for PCA
+pca_fit |> 
+  augment(biopsy) |> 
+  ggplot(aes(x = .fittedPC1,
+             y = .fittedPC2,
+             color = outcome)) +
+  geom_point(size = 1,
+             alpha = 0.5) +
+  scale_color_manual(values = c(malignant = "red2", 
+                                benign = "green3")) +
+  labs(title = "PC1 vs. PC2") +
+  theme_light()
+
 ```
