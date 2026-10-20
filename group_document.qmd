@@ -13,6 +13,14 @@ y <- x*x-x*x*x+x-x^x
 y
 ```
 
+### New feature
+
+wowoowowwo
+
+```{r}
+print("Gracias chuy por ser mi capitan")
+```
+
 ## Alberto
 
 some text pullié
