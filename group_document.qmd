@@ -5,6 +5,14 @@ format: html
 
 ## Adrián
 
+Hola mi nombre es adrian y soy parte del equipo 9
+
+```{r}
+x <- 2+2
+y <- x*x-x*x*x+x-x^x
+y
+```
+
 ## Alberto
 
 ## Lisa
