@@ -17,8 +17,10 @@ y
 
 some text pullié
 
+### New Feature
+
 ```{r}
-a = 8 + 7
+a = 7 - 6
 ```
 
 ## Lisa
