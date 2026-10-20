@@ -1,0 +1,19 @@
+---
+title: "Lab 7 Assignment: Group 09"
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+## Group 09
+
+-   Damián Medina - s261568
+
+-   Adrián Lozano - s261575
+
+-   Alberto Nueda - s263491
+
+-   Jesús Garza - s261729
+
+-   Lisa Jödicke - s261549
