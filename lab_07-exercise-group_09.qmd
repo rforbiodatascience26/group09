@@ -17,3 +17,23 @@ editor: visual
 -   Jesús Garza - s261729
 
 -   Lisa Jödicke - s261549
+
+## Load Libraries
+
+```{r}
+#| label: libraries
+#| message: false
+
+
+library("tidyverse")
+library("broom")
+library("cowplot")
+```
+
+## Load Data
+
+```{r}
+#| label: data
+
+biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
+```
