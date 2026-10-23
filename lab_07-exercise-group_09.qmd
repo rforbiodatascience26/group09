@@ -67,3 +67,34 @@ pca_fit |>
   theme_light()
 
 ```
+
+### Rotation Matrix Data
+
+```{r}
+
+#| label: Rotation_matrix_plot
+
+pca_fit |> 
+  tidy(matrix = "rotation")
+
+
+arrow_style <- arrow(angle = 20, ends = "first", type = "closed", length = grid::unit(8,'pt'))
+
+pca_fit |> 
+  tidy(matrix = "rotation") |> 
+  pivot_wider(names_from = "PC", names_prefix = "PC", values_from = "value") |> 
+  ggplot(mapping = aes(x = PC1, y = PC2)) +
+    geom_segment(xend = 0, yend = 0, arrow = arrow_style) +
+    geom_text(
+      aes(label = column),
+      hjust = 1, nudge_x = -0.02,
+      color = "#904C2F",
+      size = 2.5
+      ) +
+    xlim(-1.25, .5) + 
+    ylim(-.5, 1) +
+    coord_fixed() + # fix aspect ratio to 1:1
+    theme_minimal_grid(12)
+
+
+```
